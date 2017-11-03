@@ -2,9 +2,12 @@ const path = require('path')
 
 module.exports = {
   entry: './index.js',
+  externals: {
+    firebase: 'firebase'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'browser-client.js'
   },
   module: {
     rules: [

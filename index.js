@@ -1,12 +1,21 @@
-import firebase from 'firebase'
+const firebase = require('firebase')
 
 class Api {
+  constructor () {
+    this.apiKey = 'apiKey'
+    this.authDomain = 'authDomain'
+    this.url = 'https://temp.firebaseio.com/'
+    this.dbName = 'dbName'
+    this.user = undefined
+  }
+
   init (apiKey, authDomain, dbName) {
     this.apiKey = apiKey
     this.authDomain = authDomain
     this.url = `https://${dbName}.firebaseio.com/`
     this.dbName = dbName
     this.user = undefined
+
     return this.initFirebase()
   }
 
@@ -32,7 +41,7 @@ class Api {
     })
   }
 
-  checkExsitance (year, link) {
+  checkExistence (year, link) {
     return new Promise((resolve, reject) => {
       this.db.ref(`${year}/contributions`).once('value')
         .then((snapshot) => {
@@ -114,4 +123,4 @@ class Api {
   }
 }
 
-export default new Api()
+module.exports = new Api()
