@@ -1,6 +1,6 @@
 {
   "name": "backend-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "API for saving contributions",
   "main": "index.js",
   "scripts": {

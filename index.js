@@ -69,7 +69,7 @@ class Api {
         return
       }
 
-      this.checkExsitance(value.year, value.url)
+      this.checkExistence(value.year, value.url)
         .then((exists) => {
           if (exists === false) {
             value.slug = this.generateSlug(value)
