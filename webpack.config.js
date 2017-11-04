@@ -2,9 +2,6 @@ const path = require('path')
 
 module.exports = {
   entry: './index.js',
-  externals: {
-    firebase: 'firebase'
-  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'browser-client.js'

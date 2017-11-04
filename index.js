@@ -48,9 +48,13 @@ class Api {
           let exists = false
 
           let testLink = link.replace('https://', 'http://')
+          testLink = testLink.replace('/pen/', '/full/')
+          testLink = testLink.replace('/details/', '/full/')
 
           snapshot.forEach(data => {
             let dataUrl = data.val().url.replace('https://', 'http://')
+            dataUrl = dataUrl.replace('/pen/', '/full/')
+            dataUrl = dataUrl.replace('/details/', '/full/')
 
             if (testLink === dataUrl) {
               exists = true
@@ -65,7 +69,7 @@ class Api {
   saveContribution (value) {
     return new Promise((resolve, reject) => {
       if (!this.user) {
-        reject()
+        reject('No user logged.')
         return
       }
 
