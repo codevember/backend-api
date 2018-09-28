@@ -4,7 +4,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var firebase = require('firebase');
+var firebase = require('firebase/app');
 
 var Api =
 /*#__PURE__*/
