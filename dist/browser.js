@@ -6,6 +6,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 var firebase = require('firebase/app');
 
+require('firebase/database');
+
+require('firebase/auth');
+
 var Api =
 /*#__PURE__*/
 function () {
