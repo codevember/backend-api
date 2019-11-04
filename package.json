@@ -16,12 +16,12 @@
     "url": "https://github.com/codevember/backend-api/issues"
   },
   "homepage": "https://github.com/codevember/backend-api#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0"
-  },
   "dependencies": {
-    "firebase": "^5.5.2"
+    "firebase": "^7.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3"
   }
 }
