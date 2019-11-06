@@ -4,8 +4,7 @@
       "@babel/preset-env",
       {
         "modules": false,
-        "useBuiltIns": "entry",
-        "targets": "> 1%, last 2 versions, not ie <= 8"
+        "targets": "> 1%, last 2 versions, not ie <= 11"
       }
     ]
   ]

@@ -38,7 +38,7 @@ function () {
     value: function initFirebase() {
       var _this = this;
 
-      return new Promise(function (resolve, reject) {
+      return new Promise(function (resolve) {
         firebase.initializeApp({
           apiKey: _this.apiKey,
           authDomain: _this.authDomain,
@@ -61,7 +61,7 @@ function () {
     value: function checkExistence(year, link) {
       var _this2 = this;
 
-      return new Promise(function (resolve, reject) {
+      return new Promise(function (resolve) {
         _this2.db.ref("".concat(year, "/contributions")).once('value').then(function (snapshot) {
           var exists = false;
           var testLink = link.replace('https://', 'http://');
@@ -123,7 +123,7 @@ function () {
     value: function getContributionsOfDay(year, day) {
       var _this4 = this;
 
-      return new Promise(function (resolve, reject) {
+      return new Promise(function (resolve) {
         _this4.db.ref("".concat(year, "/contributions")).orderByChild('day').equalTo(day).once('value').then(function (snapshot) {
           var contribs = [];
           snapshot.forEach(function (data) {
